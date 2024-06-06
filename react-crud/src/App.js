@@ -1,5 +1,7 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
+import CreateUser from './components/CreateUser';
+import ListUser from './components/ListUser';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         </nav>
         <Routes>
           <Route index element={<ListUser />} />
+          <Route path="user/create" element={<CreateUser />} />
         </Routes>
       </BrowserRouter>
     </div>
