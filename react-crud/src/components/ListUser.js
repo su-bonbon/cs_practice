@@ -2,14 +2,16 @@ import { useState } from "react";
 
 export default function ListUser() {
 
-    const [input, setInpit] = useState({})
+    const [inputs, setInputs] = useState({})
 
     const handleChange = (event) => {
         const name = event.target.name;
-        const value = event
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}));
     }
     const handleSubmit = (event) => {
-        event.prevenrDefault();
+        event.preventDefault();
+        console.log(inputs);
     }
     return (
         <div>
@@ -31,7 +33,7 @@ export default function ListUser() {
                                 <label>Email: </label>
                             </th>
                             <td>
-                                <input type="text" name="email" />
+                                <input type="text" name="email" onChange={handleChange}/>
                             </td>
                         </tr>
 
@@ -40,7 +42,7 @@ export default function ListUser() {
                                 <label>Mobile: </label>
                             </th>
                             <td>
-                                <input type="text" name="mobile" />
+                                <input type="text" name="mobile" onChange={handleChange}/>
                             </td>
                         </tr>
 
