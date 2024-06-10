@@ -1,6 +1,9 @@
 export default function CreateUser() {
     return (
-        <h1>Create User</h1>
+        <div>
+            <h1>Create User</h1>
+        </div>
+        
     )
 }
 
