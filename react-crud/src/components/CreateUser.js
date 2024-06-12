@@ -12,7 +12,7 @@ export default function ListUser() {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3000/api/user/save', inputs);
+        axios.post('http://localhost:8888/api/user/save', inputs);
         console.log(inputs);
     }
     return (
